@@ -36,7 +36,7 @@
 			},
 			onPageLoad = function() {
 				var hour = new Date().getHours();
-				if (hour >= 10) {
+				if (hour <= 6 || hour >= 19) {
 					toggleTheme(true);
 				}
 			};
