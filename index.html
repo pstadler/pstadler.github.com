@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="Patrick Stadler &mdash; full stack web developer. UI/UX Engineer at Mila.com" />
+	<title>koe &middot; nig &middot; lich</title>
+	<link rel="openid.server" href="http://www.myopenid.com/server" /> 
+	<link rel="openid.delegate" href="http://pstadler.myopenid.com" />
+	<link rel="shortcut icon" type="image/x-icon" href="public/favicon.ico" id="favicon" />
+	<link rel="stylesheet" type="text/css" href="public/stylesheet.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic' rel='stylesheet' type='text/css'>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-3748589-2']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+		var toggleTheme = function(disableTransition) {
+				var className = document.body.className,
+					isDark = className.indexOf('dark') > -1;
+				document.body.className = (isDark ? '' : 'dark') + (disableTransition ? ' disable-transitions' : '');
+
+				document.head.removeChild(document.getElementById('favicon'));
+				var favicon = document.createElement('link');
+				favicon.id = 'favicon';
+				favicon.type = 'image/x-icon';
+				favicon.rel = 'shortcut icon';
+				favicon.href = 'public/favicon' + (isDark ? '' : '-dark') + '.ico';
+				document.getElementsByTagName('head')[0].appendChild(favicon);
+			},
+			onPageLoad = function() {
+				var hour = new Date().getHours();
+				if (hour >= 10) {
+					toggleTheme(true);
+				}
+			};
+	</script>
+</head>
+<body onload="onPageLoad();" class="disable-transitions">
+	<nav>
+		<a href="javascript:toggleTheme();">★</a>
+	</nav>
+	<article>
+		<header>
+			<h1>koe &middot; nig &middot; lich</h1>
+		</header>
+		<section>
+			Patrick Stadler &mdash; full stack web developer. UI/UX Engineer at <a href="http://mila.com">Mila.com</a>. HTML abuser, CSS artist, JavaScript lover, XMPP admirer. Active on <a href="https://twitter.com/#!/pstadler">Twitter</a>, idle on <a href="https://plus.google.com/116997533402414623265/posts">Google+</a> and <a href="http://forrst.me/pstadler/posts">Forrst</a>. Daily reader of <a href="http://news.ycombinator.com/user?id=pstadler">Hacker News</a> and his Gmail <a href="mailto:patrick.stadler+koeniglich@gmail.com">Inbox</a>.
+		</section>
+		<section>
+			Open source fanatic. Creator and maintainer of <a href="http://candy-chat.github.com/candy/">Candy</a> and various other projects such as <a href="https://addons.mozilla.org/en-US/firefox/addon/pagerank-client/">PageRank Client</a>, <a href="https://github.com/pstadler/optometrist">Optometrist</a>, <a href="https://github.com/pstadler/octofolders">Octofolders</a> and <a href="https://github.com/pstadler">many more</a>.
+		</section>
+		<section>
+			Living in the beautiful city of <a href="http://en.wikipedia.org/wiki/Zurich">Zürich, Switzerland</a>. Cycling to and from work. Enjoying fine food and wine. Listening to <a href="http://www.last.fm/user/pstadler/library/tags?tag=seen+live">everything</a> played on real instruments.
+		</section>
+	</article>
+</body>
