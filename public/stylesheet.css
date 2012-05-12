@@ -3,7 +3,7 @@
 	font-size: 1.3rem;
 	line-height: 2.6rem;
 	font-style: italic;
-	font-weight: normal;
+	font-weight: 300;
 	-moz-transition: color, background-color 1s;
 	-webkit-transition: color, background-color 1s;
 	-ms-transition: color, background-color 1s;
@@ -31,6 +31,10 @@ body {
 h1 {
 	font-size: 2rem;
 	color: #aaa;
+}
+
+h2 {
+	display: inline;
 }
 
 article {
@@ -62,6 +66,7 @@ article a:hover {
 }
 
 nav a {
+	font-size: .8em;
 	color: #6e8c4f;
 	position: fixed;
 	right: 0;
