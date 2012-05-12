@@ -37,7 +37,7 @@ h2 {
 	display: inline;
 }
 
-article {
+#content {
 	width: 60%;
 	max-width: 700px;
 	margin: 2.6rem auto;
@@ -55,13 +55,13 @@ a {
 	outline: 0;
 }
 
-article a {
+#content a {
 	color: #865ba3;
 	text-decoration: none;
 	border: 0 solid #d9cce2;
 }
 
-article a:hover {
+#content a:hover {
 	border-bottom-width: 1px;
 }
 
@@ -78,12 +78,12 @@ nav a {
 	padding: 5%;
 }
 
-body.dark {
+.dark {
 	background-color: #333;
 	color: #777;
 }
 
-.dark article a {
+.dark #content a {
 	color: #6e8c4f;
 	border-color: #455136;
 }
@@ -99,7 +99,7 @@ body.dark {
 		line-height: 2rem;
 	}
 
-	article {
+	#content {
 		width: 80%;
 	}
 }
