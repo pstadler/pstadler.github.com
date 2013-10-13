@@ -109,6 +109,11 @@ nav a {
 	#content {
 		width: 80%;
 	}
+
+	nav a {
+		padding: 4%;
+		font-size: 0.8rem;
+	}
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
