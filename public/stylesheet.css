@@ -1,8 +1,7 @@
-* { 
-	font-family: 'Open Sans', sans-serif;
+* {
+	font-family: 'Raleway', sans-serif;
 	font-size: 1.3rem;
-	line-height: 2.6rem;
-	font-style: italic;
+	line-height: 2.3rem;
 	font-weight: 300;
 	-moz-transition: color, background-color 1s;
 	-webkit-transition: color, background-color 1s;
@@ -66,16 +65,24 @@ a {
 }
 
 nav a {
-	font-size: .8em;
+	font-size: 1.1rem;
 	color: #6e8c4f;
 	position: fixed;
 	right: 0;
 	top: 0;
-	line-height: 1rem;
+	line-height: 2.3rem;
 	display: inline-block;
 	font-style: normal;
 	text-decoration: none;
-	padding: 5%;
+	padding: 2.6rem 5% 5% 5%;
+}
+
+/* Firefox displays some UTF-8 characters different */
+@-moz-document url-prefix() {
+	nav a {
+		padding-top: 2.3rem;
+		font-size: 2rem;
+	}
 }
 
 .dark {
