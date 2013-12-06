@@ -3,47 +3,42 @@
 	font-size: 1.3rem;
 	line-height: 2.3rem;
 	font-weight: 300;
-	-moz-transition: color, background-color 1s;
-	-webkit-transition: color, background-color 1s;
-	-ms-transition: color, background-color 1s;
-	-o-transition: color, background-color 1s;
-	transition: color, background-color 1s;
 }
 
-.disable-transitions *, .disable-transitions {
-	-moz-transition: none;
-	-webkit-transition: none;
-	-ms-transition: none;
-	-o-transition: all 0 none;
-	transition: none;
+strong {
+	font-weight: 600;
 }
 
 body {
 	text-align: center;
-	color: #555;
+	color: #666;
 	background-color: #fbfbfb;
 	margin: 0;
 	padding: 0;
 	height: 100%;
 }
 
-h1 {
-	font-size: 2rem;
-	color: #aaa;
-}
-
 h2 {
 	display: inline;
+}
+
+.large {
+	font-size: 2.2rem;
+}
+
+.xlarge {
+	font-size: 3.5rem;
 }
 
 #content {
 	width: 60%;
 	max-width: 700px;
-	margin: 2.6rem auto;
+	min-width: 600px;
+	margin: 5rem auto;
 }
 
 section {
-	margin: 2.6rem 0;
+	margin: 3rem 0;
 	text-align: justify;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
@@ -52,52 +47,47 @@ section {
 
 a {
 	outline: 0;
-}
-
-#content a {
-	color: #865ba3;
+	color: #aa9374;
 	text-decoration: none;
-	border: 0 solid #d9cce2;
 }
 
-#content a:hover {
-	border-bottom-width: 1px;
+a:hover {
+	color: white;
+	background-color: #aa9374;
 }
 
-nav a {
-	font-size: 1.1rem;
-	color: #6e8c4f;
-	position: fixed;
-	right: 0;
-	top: 0;
-	line-height: 2.3rem;
+a.no-hover {
+	background: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.social {
+	text-align: center;
+}
+
+.social li {
 	display: inline-block;
-	font-style: normal;
-	text-decoration: none;
-	padding: 2.6rem 5% 5% 5%;
+	padding: 0 0 0 1rem;
+	vertical-align: middle;
 }
 
-/* Firefox displays some UTF-8 characters different */
-@-moz-document url-prefix() {
-	nav a {
-		padding-top: 2.3rem;
-		font-size: 2rem;
-	}
+.social li:first-child {
+	padding: 0;
 }
 
-.dark {
-	background-color: #333;
-	color: #777;
-}
-
-.dark #content a {
-	color: #6e8c4f;
-	border-color: #455136;
-}
-
-.dark nav a {
-	color: #865ba3;
-}
+.twitter:hover 		 { color: #5ea9dd; }
+.github:hover 		 { color: #333333; }
+.google-plus:hover 	 { color: #dd4b39; }
+.mail:hover 		 { color: #aa9374; }
+.forrst:hover 		 { color: #3b7140; }
+.lastfm:hover 		 { color: #d12127; }
+.linkedin:hover 	 { color: #1683bb; }
+.stackoverflow:hover { color: #d38b28; }
 
 /* small mobile devices */
 @media only screen and (device-width:320px) {
@@ -108,16 +98,76 @@ nav a {
 
 	#content {
 		width: 80%;
-	}
-
-	nav a {
-		padding: 4%;
-		font-size: 0.8rem;
+		min-width: auto;
+		max-width: auto;
 	}
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	body {
-		background-size: 50px 50px;
-	}
+/* icons */
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot');
+	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.ttf') format('truetype'),
+		url('fonts/icomoon.woff') format('woff'),
+		url('fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+	content: "\e600";
+}
+.icon-twitter:before {
+	content: "\e601";
+}
+.icon-firefox:before {
+	content: "\e602";
+}
+.icon-google-plus:before {
+	content: "\e603";
+}
+.icon-mail:before {
+	content: "\e604";
+}
+.icon-stackoverflow:before {
+	content: "\e605";
+}
+.icon-forrst:before {
+	content: "\e606";
+}
+.icon-linkedin:before {
+	content: "\e607";
+}
+.icon-xing:before {
+	content: "\e608";
+}
+.icon-quill:before {
+	content: "\e609";
+}
+.icon-lastfm:before {
+	content: "\e60a";
+}
+.icon-location:before {
+	content: "\e60c";
+}
+.icon-mug:before {
+	content: "\e60d";
+}
+.icon-code:before {
+	content: "\e60b";
 }

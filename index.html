@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="description" content="Patrick Stadler &mdash; full stack web developer" />
+	<meta name="description" content="Patrick Stadler &mdash; full stack web developer">
 	<title>pstadler • sh</title>
-	<link rel="openid2.provider" href="https://www.google.com/accounts/o8/ud?source=profiles" />
-	<link rel="openid2.local_id" href="https://profiles.google.com/116997533402414623265" />
-	<link rel="shortcut icon" type="image/x-icon" href="public/favicon.ico" id="favicon" />
-	<link rel="stylesheet" type="text/css" href="public/stylesheet.css" />
+	<link rel="openid2.provider" href="https://www.google.com/accounts/o8/ud?source=profiles">
+	<link rel="openid2.local_id" href="https://profiles.google.com/116997533402414623265">
+	<link rel="shortcut icon" type="image/x-icon" href="public/favicon.ico" id="favicon">
+	<link rel="stylesheet" type="text/css" href="public/stylesheet.css">
 	<link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
@@ -20,42 +20,106 @@
 			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
-
-		var toggleTheme = function(disableTransition) {
-				var className = document.body.className,
-					isDark = className.indexOf('dark') > -1;
-				document.body.className = (isDark ? '' : 'dark') + (disableTransition ? ' disable-transitions' : '');
-
-				document.head.removeChild(document.getElementById('favicon'));
-				var favicon = document.createElement('link');
-				favicon.id = 'favicon';
-				favicon.type = 'image/x-icon';
-				favicon.rel = 'shortcut icon';
-				favicon.href = 'public/favicon' + (isDark ? '' : '-dark') + '.ico';
-				document.getElementsByTagName('head')[0].appendChild(favicon);
-			},
-			onPageLoad = function() {
-				var hour = new Date().getHours();
-				if (hour <= 6 || hour >= 19) {
-					toggleTheme(true);
-				}
-			};
 	</script>
 </head>
-<body onload="onPageLoad();" class="disable-transitions">
-	<nav>
-		<a href="javascript:toggleTheme();">★</a>
-	</nav>
+<body itemscope itemtype="http://schema.org/WebPage">
 	<div id="content">
-		<h1>pstadler • sh</h1>
+		<h1 class="large">pstadler • sh</h1>
 		<section>
-			<h2><span itemprop="name">Patrick Stadler</span> &mdash; full stack <span itemprop="jobTitle">web developer</span>.</h2> Currently working at <a href="http://mila.com">Mila.com</a>. HTML abuser, CSS artist, JavaScript lover, Command Line hacker, Git master. Active on <a href="https://twitter.com/#!/pstadler" rel="me">Twitter</a>, idle on <a href="https://plus.google.com/116997533402414623265" rel="author">Google+</a> and <a href="http://forrst.me/pstadler/posts" rel="me">Forrst</a>. Daily reader of <a href="http://news.ycombinator.com/user?id=pstadler" rel="me">Hacker News</a> and his <a href="mailto:patrick.stadler+sh@gmail.com">Gmail Inbox</a>.
+			<ul class="social">
+				<li>
+					<a href="http://stackoverflow.com/users/183097/pstadler" rel="me" class="no-hover stackoverflow">
+						<i class="icon-stackoverflow"></i>
+					</a>
+				</li>
+				<li>
+					<a href="http://forrst.me/pstadler/posts" rel="me" class="no-hover forrst">
+						<i class="icon-forrst"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://plus.google.com/116997533402414623265" rel="author" class="no-hover google-plus">
+						<i class="large icon-google-plus"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/pstadler" rel="me" class="no-hover twitter">
+						<i class="xlarge icon-twitter"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/pstadler" rel="me" class="no-hover github">
+						<i class="xlarge icon-github"></i>
+					</a>
+				</li>
+				<li>
+					<a href="mailto:patrick.stadler+sh@gmail.com" class="no-hover mail">
+						<i class="large icon-mail"></i>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.last.fm/user/pstadler/library/tags?tag=seen+live" rel="me" class="no-hover lastfm">
+						<i class="icon-lastfm"></i>
+					</a>
+				</li>
+				<li>
+					<a href="http://www.linkedin.com/pub/patrick-stadler/34/932/3a8" rel="me" class="no-hover linkedin">
+						<i class="icon-linkedin"></i>
+					</a>
+				</li>
+			</ul>
 		</section>
 		<section>
-			<h2>Open source fanatic.</h2> Creator and maintainer of <a href="http://candy-chat.github.com/candy/">Candy</a> and various other projects such as <a href="https://github.com/pstadler/octoprowl">Octoprowl</a>, <a href="https://github.com/pstadler/optometrist">Optometrist</a>, <a href="https://github.com/pstadler/alfred-screensharing">Screen Sharing for Alfred</a>, <a href="https://github.com/pstadler/octofolders">Octofolders</a> and <a href="https://github.com/pstadler" rel="me">many more</a>.
+			<h2><i class="icon-mug"></i> <span itemprop="name">Patrick Stadler</span> &mdash; full stack <span itemprop="jobTitle">web developer</span>.</h2> Located in the beautiful city of <a href="http://en.wikipedia.org/wiki/Zurich" ><i class="icon-location"></i> <span itemprop="addressLocality">Zürich</span>, <span itemprop="nationality">Switzerland</span></a>. Working at <a href="http://mila.com">Mila.com</a>.
 		</section>
 		<section>
-			<h2>Living in the beautiful city of <a href="http://en.wikipedia.org/wiki/Zurich" ><span itemprop="addressLocality">Zürich</span>, <span itemprop="nationality">Switzerland</span></a>.</h2> Cycling to and from work. Enjoying fine food and wine. Listening to <a href="http://www.last.fm/user/pstadler/library/tags?tag=seen+live">everything</a> played on real instruments.
+			<h2><i class="icon-code"></i> Open Source</h2>
+			<ul>
+				<li>
+					<a href="http://candy-chat.github.com/candy/"><strong>Candy</strong> &mdash; a web-based chat client for XMPP</a>
+				</li>
+				<li>
+					<a href="https://github.com/pstadler/alfred-screensharing"><strong>Screen Sharing</strong> for Alfred</a>
+				</li>
+				<li>
+					<a href="https://github.com/pstadler/battery.js"><strong>Battery.js</strong> &mdash; a tiny wrapper</a>
+				</li>
+				<li>
+					<a href="https://github.com/pstadler/octofolders"><strong>Octofolders</strong> for Mac OS X</a>
+				</li>
+				<li>
+					<a href="https://github.com/pstadler/optometrist"><strong>Optometrist</strong> theme for Terminal & iTerm2</a>
+				</li>
+				<li>
+					<a href="https://github.com/pstadler/alfred-mount"><strong>Mount Network Shares</strong> with Alfred</a>
+				</li>
+				<li>
+					<a href="https://github.com/pstadler/octoprowl"><strong>Octoprowl</strong> = GitHub + Prowl + narcissism</a>
+				</li>
+				<li>
+					<a href="https://github.com/pstadler/alfred-play"><strong>Alfred Play</strong> &mdash; smart hotkeys for iTunes & Spotify</a>
+				</li>
+				<li>
+					<a href="https://github.com/pstadler/plex-duplicates"><strong>Plex Duplicates</strong> &mdash; scan Plex for duplicate files</a>
+				</li>
+				<li>
+					<a href="https://github.com/pstadler/the-cube"><strong>The Cube</strong> &mdash; fun with CSS3 transitions</a>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2><i class="icon-quill"></i> Writings</h2>
+			<ul>
+				<li>
+					<a href="https://github.com/pstadler/non-terminating-bash-processes">Taming <strong>non-terminating Bash processes</strong></a>
+				</li>
+				<li>
+					<a href="https://coderwall.com/p/afmnbq">Homebrew's new feature: <strong>Brewfiles</strong></a>
+				</li>
+				<li>
+					<a href="https://coderwall.com/p/z3gzng">Running <strong>Pow and Apache</strong></a>
+				</li>
+			</ul>
 		</section>
 	</div>
 </body>
