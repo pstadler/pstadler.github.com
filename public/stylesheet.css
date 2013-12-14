@@ -50,8 +50,7 @@ a {
 }
 
 a:hover {
-	color: white;
-	background-color: #aa9374;
+	background-color: rgba(170, 147, 116, 0.1);
 }
 
 a.no-hover {
