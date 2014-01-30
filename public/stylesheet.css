@@ -50,11 +50,18 @@ a {
 }
 
 a:hover {
-	background-color: rgba(170, 147, 116, 0.1);
+	background-color: rgba(170, 147, 116, 0.15);
 }
 
 a.no-hover {
 	background: none;
+}
+
+::-moz-selection {
+	background: rgba(170, 147, 116, 0.15);
+}
+::selection {
+	background: rgba(170, 147, 116, 0.15);
 }
 
 ul {
