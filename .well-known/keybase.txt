@@ -1,0 +1,65 @@
+==================================================================
+https://keybase.io/ps
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://pstadler.sh
+  * I am ps (https://keybase.io/ps) on keybase.
+  * I have a public key with fingerprint 6DDF F549 C7E4 555F FDC1  F6FA 31DB BB1F 6949 DA68
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "6ddff549c7e4555ffdc1f6fa31dbbb1f6949da68",
+            "host": "keybase.io",
+            "key_id": "31dbbb1f6949da68",
+            "uid": "108e259156358a5dd732fe590fd88600",
+            "username": "ps"
+        },
+        "service": {
+            "hostname": "pstadler.sh",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1396025485,
+    "expire_in": 157680000,
+    "prev": "4954f041c6873501331aac2d747ff81fb970cfc753a5d0c28d539c2ebb80360e",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v0.1.1
+Comment: https://keybase.io/crypto
+
+yMHuAnicbZFdSBxXFMd3sxp025qlCSZCaHfvg6V1WefrzhdtTdIKsUqsKIGk2s18
+3NFBnVlnZv3ariGphWhIH0rBUoRWghqTB5s8tKgvEoSgtoSANK7bxIgYyhpD/ehD
+UKp3JM1T7su955zf/3/u4Uy95fP4vb50/tu++TGfd3YyE/dUwxvXEkA21Q4gJkAj
+2r803ahHVszSDQeIgFVVTYOMoHCIgRBqmqqQGqtJNKnKsoyfAiOoEsuDMGgwbVeB
+bWTJRhHdxDkcRHUVZ1/Dx/cLJMEjCgokZGnIS1BVOZrSEBQITeV5liBc0EaWITUj
+TMdskAwDHLfqCo4T+01f1RxJbUJWxG7AophlOqZiNuFCg+PERFfndMRcsA3J0ZcW
+UVk3VDwwFrQiy9ZNA4gkJhVHdz1JWmAJCjI8DAPUHtMtFNVdAnIsT+DjtkGt2JIR
+IKMRDKmwPEdDgqRpUpIUSuUYTtN4UpMFjlA0hYM0HpFQKF6FtKBQSJZ5gmYJhPvb
+qMUwgcjjb0r12NLW6w3JiVsIJO9O1mZ5vH7PwewD7so8/tzA/4tMdeZ4RnZ+n6v5
+TBwrHAjOX+6daA9UbfZv7PZNEYPrvzX+cvWMv/t6wY+XeuN/zC2Em9cs6r3R06Ul
+K6sXKrNOvbH9YGjjy9lzxkeHa0N/loWWHy9EboL83GOZkz/VBW//987fznDPlUS3
+XZq3TW6Xf7/VdcRZXdgNVPV9fPbrgUMnCsSfiU+Sk0MXd1IVqZnxkbIf+p02vqRz
+q2ocfLskpN9MBweLv8srXCcjRbm3iv8y3/3U+0XNfOh45Ysn018NPKLAw66NalFr
++bxu5cMKL73ctab+e2f1vKk8Hw9982vpUnZgMRXcTN5bFMuLws/A+x9MZDLT3qf3
+E+meZM7oP0cTwzPmHnewD6Y=
+=EEqK
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ps
+
+==================================================================
