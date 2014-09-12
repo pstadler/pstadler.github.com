@@ -2,7 +2,7 @@
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 1.4rem;
 	line-height: 2.5rem;
-	font-weight: 300;
+	font-weight: 200;
 }
 
 strong {
@@ -30,7 +30,7 @@ h2 {
 	font-size: 3.5rem;
 }
 
-#content {
+.container {
 	width: 700px;
 	margin: 5rem auto;
 }
@@ -94,16 +94,21 @@ ul {
 .stackoverflow:hover { color: #d38b28; }
 
 /* small mobile devices */
-@media only screen and (device-width:320px) {
+@media (max-device-width:400px) {
 	* {
-		font-size: 60%;
-		line-height: 1.8rem;
+		font-size: 1rem;
+		line-height: 1.5rem;
 	}
 
-	#content {
+	.container {
 		margin: 3rem auto;
-		width: 80%;
+		width: 90%;
 	}
+
+	.social * {
+		font-size: 1.2rem;
+	}
+
 }
 
 /* icons */
