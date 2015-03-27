@@ -1,8 +1,8 @@
 * {
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 1.4rem;
-	line-height: 2.5rem;
-	font-weight: 200;
+	font-size: 1.2rem;
+	line-height: 2rem;
+	font-weight: 300;
 }
 
 strong {
@@ -22,8 +22,17 @@ h2 {
 	display: inline;
 }
 
+.small {
+	font-size: 1rem;
+}
+
+.xsmall {
+	font-size: 0.8rem;
+}
+
 .large {
 	font-size: 2.2rem;
+	font-weight: 200;
 }
 
 .xlarge {
@@ -41,6 +50,20 @@ section {
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
+}
+
+footer {
+	display: block;
+	margin: 0 0 1rem 0;
+	text-align: center;
+}
+
+footer abbr {
+	border-bottom: none;
+}
+
+footer abbr[title="#aa9374"] {
+	color: #aa9374;
 }
 
 a {
@@ -70,19 +93,20 @@ ul {
 	margin: 0;
 }
 
-.social {
-	text-align: center;
-}
-
-.social li {
+.inline li {
 	display: inline-block;
 	padding: 0 0 0 1rem;
 	vertical-align: middle;
 }
 
-.social li:first-child {
+li:first-child {
 	padding: 0;
 }
+
+.social {
+	text-align: center;
+}
+
 
 .twitter:hover 		 { color: #5ea9dd; }
 .github:hover 		 { color: #333333; }
