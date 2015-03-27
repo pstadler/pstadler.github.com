@@ -60,6 +60,7 @@ footer {
 
 footer abbr {
 	border-bottom: none;
+	font-family: serif;
 }
 
 footer abbr[title="#aa9374"] {
