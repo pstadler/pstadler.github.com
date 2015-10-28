@@ -192,5 +192,18 @@
         e.preventDefault();
       }
     });
+
+    var tapTimer = null;
+    document.body.addEventListener('touchstart', function() {
+      if(!tapTimer) {
+        tapTimer = window.setTimeout(function() {
+          tapTimer = null;
+        }, 500);
+      } else {
+        window.clearTimeout(tapTimer);
+        tapTimer = null;
+        toggleMode();
+      }
+    });
   </script>
 </body>
