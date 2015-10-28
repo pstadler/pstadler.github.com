@@ -9,13 +9,28 @@ strong {
 	font-weight: 400;
 }
 
-body {
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	position: relative;
+}
+
+.frame {
 	text-align: center;
 	color: #666;
 	background-color: #fbfbfb;
 	margin: 0;
 	padding: 0;
 	height: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+  transition: height 250ms ease-in;
 }
 
 h2 {
@@ -116,7 +131,7 @@ li:first-child {
 .stackoverflow:hover { color: #d38b28; }
 
 /* night theme */
-body.night {
+.frame.night {
 	color: #e8e8e8;
 	background-color: #282828;
 }
