@@ -1,19 +1,15 @@
-* {
-	font-family: 'Fira Sans', sans-serif;
-	font-size: 1.2rem;
-	line-height: 2rem;
-	font-weight: 300;
-}
-
-strong {
-	font-weight: 400;
-}
-
 html, body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
 	position: relative;
+  font-family: Roboto, sans-serif;
+	font-size: 1.22rem;
+	line-height: 2rem;
+	font-weight: 300;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .frame {
@@ -33,16 +29,27 @@ html, body {
   transition: height 250ms ease-in;
 }
 
+h1 {
+	font-family: 'Roboto Slab', sans-serif;
+  font-weight: 400;
+}
+
 h2 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
 	display: inline;
+}
+
+.xsmall {
+  font-size: 0.8rem;
 }
 
 .small {
 	font-size: 1rem;
 }
 
-.xsmall {
-	font-size: 0.8rem;
+.medium {
+  font-size: 1.5rem;
 }
 
 .large {
@@ -82,6 +89,10 @@ footer abbr[title="#aa9374"] {
 	color: #aa9374;
 }
 
+footer abbr[title="#da4d5e"] {
+	color: #da4d5e;
+}
+
 a {
 	outline: 0;
 	color: #aa9374;
@@ -89,7 +100,7 @@ a {
 }
 
 a:hover {
-	border-bottom: 2px solid rgba(170, 147, 116, 0.5);
+	border-bottom: 1px solid rgba(170, 147, 116, 0.5);
 }
 
 a.no-hover {
@@ -121,6 +132,10 @@ li:first-child {
 
 .social {
 	text-align: center;
+}
+
+.caliper {
+  color: #da4d5e;
 }
 
 .twitter:hover { color: #55acee; }
@@ -169,6 +184,13 @@ li:first-child {
 }
 
 /* icons */
+.dollar:before {
+  font-style: normal;
+  font-weight: 400;
+  font-family: 'Roboto Slab', serif;
+  content: '#';
+}
+
 @font-face {
 	font-family: 'icomoon';
 	src:url('fonts/icomoon.eot');
@@ -188,10 +210,6 @@ li:first-child {
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
-
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 .icon-github:before {
