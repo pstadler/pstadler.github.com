@@ -167,7 +167,7 @@ li:first-child {
 
 /* small mobile devices */
 @media (max-device-width:400px) {
-	* {
+	html, body {
 		font-size: 1rem;
 		line-height: 1.5rem;
 	}
@@ -184,7 +184,7 @@ li:first-child {
 }
 
 /* icons */
-.dollar:before {
+.hash:before {
   font-style: normal;
   font-weight: 400;
   font-family: 'Roboto Slab', serif;
