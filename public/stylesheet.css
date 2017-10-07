@@ -34,6 +34,13 @@ h1 {
   font-weight: 400;
 }
 
+.home:before {
+  font-style: normal;
+  font-weight: 400;
+  font-family: 'Roboto Slab', serif;
+  content: '~/ ';
+}
+
 h2 {
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
@@ -188,7 +195,7 @@ li:first-child {
   font-style: normal;
   font-weight: 400;
   font-family: 'Roboto Slab', serif;
-  content: '#';
+  content: '# ';
 }
 
 @font-face {
