@@ -150,18 +150,26 @@
     </footer>
   </div>
   <script>
-    var frame = document.getElementsByClassName('frame')[0];
-    var hour = new Date().getHours();
-
-    if(hour >= 20 || hour < 8) {
-      frame.className = 'frame night';
-    }
-
     var toggleKey = 32; // space
     var isToggled = false;
 
+    var frame = document.getElementsByClassName('frame')[0];
     var clone = frame.cloneNode(true);
-    clone.className = (clone.className === 'frame' ? 'frame night' : 'frame');
+
+    var darkSchemeMql = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+
+    if (darkSchemeMql) {
+      darkSchemeMql.addEventListener('change', (e) => {
+        frame.className = (isToggled && e.matches) || (!isToggled && !e.matches) ? 'frame' : 'frame night';
+        clone.className = (frame.className === 'frame' ? 'frame night' : 'frame');
+      });
+
+      if (darkSchemeMql.matches) {
+        frame.className = 'frame night';
+      }
+    }
+
+    clone.className = (frame.className === 'frame' ? 'frame night' : 'frame');
     clone.style.height = '0';
     document.body.appendChild(clone);
 
