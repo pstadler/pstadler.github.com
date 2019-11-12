@@ -147,7 +147,7 @@ li:first-child {
 .mail:hover { color: #999; }
 .linkedin:hover { color: #1683bb; }
 .stackoverflow:hover { color: #F48024; }
-.hackernews:hover { color: #ff6600; }
+.keybase:hover { color: #4c8eff; }
 
 /* night theme */
 .frame.night {
@@ -231,6 +231,6 @@ li:first-child {
 .icon-linkedin:before {
   content: "\1f550";
 }
-.icon-hackernews:before {
+.icon-keybase:before {
   content: "\1f553";
 }
