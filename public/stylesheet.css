@@ -142,6 +142,36 @@ li:first-child {
   color: #da4d5e;
 }
 
+.dot {
+  position: relative;
+  text-align: center;
+}
+
+.dot::before,
+.dot::after {
+  content: "";
+  position: absolute;
+  bottom: -19.2rem;
+  left: 50%;
+  margin-left: -20rem;
+  height: 40rem;
+  width: 40rem;
+  border-radius: 100%;
+  cursor: text;
+  background-image: url(pstadler.png);
+  background-size: cover;
+  filter: grayscale(100%);
+  transform: scale(0.01);
+}
+
+.dot:hover::after {
+  transform: scale(1);
+  opacity: 0;
+  transition: 3s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+  filter: none;
+  pointer-events: none;
+}
+
 .twitter:hover { color: #55acee; }
 .github:hover { color: #333; }
 .mail:hover { color: #999; }
@@ -168,6 +198,11 @@ li:first-child {
 }
 
 .night .github:hover { color: #fff; }
+
+.night .dot::after,
+.night .dot::before {
+  filter: saturate(60%);
+}
 
 /* small mobile devices */
 @media (max-device-width:640px) {
