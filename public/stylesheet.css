@@ -3,8 +3,8 @@ html, body {
   padding: 0;
   height: 100%;
   position: relative;
-  font-family: Roboto, sans-serif;
-  font-size: 1.22rem;
+  font-family: 'Iosevka Sparkle Web', sans-serif;
+  font-size: 1.2rem;
   line-height: 2rem;
   font-weight: 300;
   box-sizing: border-box;
@@ -30,20 +30,24 @@ html, body {
 }
 
 h1 {
-  font-family: 'Roboto Slab', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .home:before {
   font-style: normal;
-  font-weight: 400;
-  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
   content: '~/ ';
 }
 
+.hash:before {
+  font-style: normal;
+  font-weight: 500;
+  font-family: 'Iosevka Sparkle Web', serif;
+  content: '# ';
+}
+
 h2 {
-  font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  font-weight: 500;
   margin: 1rem 0 1rem 0;
 }
 
@@ -221,14 +225,27 @@ li:first-child {
   }
 }
 
-/* icons */
-.hash:before {
-  font-style: normal;
-  font-weight: 400;
-  font-family: 'Roboto Slab', serif;
-  content: '# ';
+/* font */
+@font-face {
+	font-family: 'Iosevka Sparkle Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('fonts/iosevka-sparkle-light.woff2') format('woff2'), url('fonts/iosevka-sparkle-light.woff') format('woff'), url('fonts/iosevka-sparkle-light.ttf') format('truetype');
 }
 
+
+@font-face {
+	font-family: 'Iosevka Sparkle Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('fonts/iosevka-sparkle-medium.woff2') format('woff2'), url('fonts/iosevka-sparkle-medium.woff') format('woff'), url('fonts/iosevka-sparkle-medium.ttf') format('truetype');
+}
+
+/* icons */
 @font-face {
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?h8dge3');
