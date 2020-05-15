@@ -36,7 +36,7 @@ h1 {
 .home:before {
   font-style: normal;
   font-weight: 500;
-  content: '~/ ';
+  content: '~/';
 }
 
 .hash:before {
