@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   height: 100%;
   position: relative;
-  font-family: 'Iosevka Sparkle Web', sans-serif;
+  font-family: 'Iosevka Sparkle', sans-serif;
   font-size: 1.2rem;
   line-height: 2rem;
   font-weight: 300;
@@ -15,7 +15,7 @@ html, body {
 .frame {
   text-align: center;
   color: #666;
-  background-color: #fbfbfb;
+  background-color: #f7f2ed;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -30,25 +30,26 @@ html, body {
 }
 
 h1 {
+  font-family: 'Kalam', serif;
   font-weight: 500;
+}
+
+h2 {
+  font-family: 'Kalam', serif;
+  font-weight: 500;
+  margin: 1rem 0 1rem 0;
 }
 
 .home:before {
   font-style: normal;
   font-weight: 500;
-  content: '~/';
+  content: '~/ ';
 }
 
 .hash:before {
   font-style: normal;
   font-weight: 500;
-  font-family: 'Iosevka Sparkle Web', serif;
-  content: '# ';
-}
-
-h2 {
-  font-weight: 500;
-  margin: 1rem 0 1rem 0;
+  content: '> ';
 }
 
 .xsmall {
@@ -56,19 +57,15 @@ h2 {
 }
 
 .small {
-  font-size: 1rem;
-}
-
-.medium {
   font-size: 1.4rem;
 }
 
-.large {
-  font-size: 2.2rem;
+.medium {
+  font-size: 1.8rem;
 }
 
-.xlarge {
-  font-size: 3.5rem;
+.large {
+  font-size: 2.4rem;
 }
 
 .container {
@@ -101,6 +98,10 @@ footer abbr[title="#aa9374"] {
 }
 
 footer abbr[title="#da4d5e"] {
+  color: #da4d5e;
+}
+
+.caliper {
   color: #da4d5e;
 }
 
@@ -142,16 +143,16 @@ li:first-child {
   text-align: center;
 }
 
-.caliper {
-  color: #da4d5e;
-}
+.twitter { color: #55acee; }
+.github { color: #333; }
+.night .github { color: #fff; }
+.mail { color: #d44638; }
+.linkedin { color: #1683bb; }
 
-.twitter:hover { color: #55acee; }
-.github:hover { color: #333; }
-.mail:hover { color: #999; }
-.linkedin:hover { color: #1683bb; }
-.stackoverflow:hover { color: #F48024; }
-.keybase:hover { color: #4c8eff; }
+.social a:hover {
+  color: #aa9374;
+  transform: scale(1.2);
+}
 
 /* night theme */
 .frame.night {
@@ -171,7 +172,6 @@ li:first-child {
   display: none;
 }
 
-.night .github:hover { color: #fff; }
 
 /* small mobile devices */
 @media (max-device-width:640px) {
@@ -190,27 +190,17 @@ li:first-child {
   }
 }
 
-/* font */
+/* fonts & icons */
 @font-face {
-	font-family: 'Iosevka Sparkle Web';
-	font-display: swap;
-	font-weight: 300;
-	font-stretch: normal;
-	font-style: normal;
-	src: url('fonts/iosevka-sparkle-light.woff2') format('woff2'), url('fonts/iosevka-sparkle-light.woff') format('woff'), url('fonts/iosevka-sparkle-light.ttf') format('truetype');
+  font-family: 'Iosevka Sparkle';
+  font-display: swap;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  src: url('fonts/iosevka-sparkle-light.woff2') format('woff2'), url('fonts/iosevka-sparkle-light.woff') format('woff'), url('fonts/iosevka-sparkle-light.ttf') format('truetype');
 }
 
 
-@font-face {
-	font-family: 'Iosevka Sparkle Web';
-	font-display: swap;
-	font-weight: 500;
-	font-stretch: normal;
-	font-style: normal;
-	src: url('fonts/iosevka-sparkle-medium.woff2') format('woff2'), url('fonts/iosevka-sparkle-medium.woff') format('woff'), url('fonts/iosevka-sparkle-medium.ttf') format('truetype');
-}
-
-/* icons */
 @font-face {
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?h8dge3');
@@ -233,9 +223,6 @@ li:first-child {
   line-height: 1;
 }
 
-.icon-stackoverflow:before {
-  content: "\1f554";
-}
 .icon-mail:before {
   content: "\1f555";
 }
@@ -247,7 +234,4 @@ li:first-child {
 }
 .icon-linkedin:before {
   content: "\1f550";
-}
-.icon-keybase:before {
-  content: "\1f553";
 }
