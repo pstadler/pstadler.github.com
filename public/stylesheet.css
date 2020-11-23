@@ -1,77 +1,42 @@
+:root {
+  --bg-color1: rgb(12, 12, 23);
+  --bg-color2: rgb(16, 16, 55);
+  --bg-accent: rgba(255, 255, 255, 0.15);
+
+  --fg-text: rgb(162, 108, 240);
+  --fg-title: rgb(216, 255, 109);
+  --fg-link: rgb(255, 107, 107);
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  position: relative;
-  font-family: 'Iosevka Sparkle', sans-serif;
-  font-size: 1.2rem;
-  line-height: 2rem;
-  font-weight: 300;
+  min-height: 100%;
+}
+
+body {
+  font-size: 1.5rem;
+  line-height: 180%;
   box-sizing: border-box;
+  font-family: 'Iosevka Sparkle', serif;
+  color: var(--fg-text);
+  background-color: var(--bg-color1);
+  background-image: linear-gradient(60deg, var(--bg-color1), var(--bg-color2));
+  background-size: cover;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .frame {
   text-align: center;
-  color: #666;
-  background-color: #f7f2ed;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transition: height 250ms ease-in;
 }
 
-h1 {
-  font-family: 'Kalam', serif;
-  font-weight: 500;
-}
-
-h2 {
-  font-family: 'Kalam', serif;
-  font-weight: 500;
-  margin: 1rem 0 1rem 0;
-}
-
-.home:before {
-  font-style: normal;
-  font-weight: 500;
-  content: '~/ ';
-  white-space: pre;
-  position: absolute;
-  transform: translateX(-100%);
-}
-
-.prompt:before {
-  font-style: normal;
-  font-weight: 500;
-  content: '> ';
-  white-space: pre;
-  position: absolute;
-  transform: translateX(-100%);
-}
-
-.xsmall {
-  font-size: 0.9rem;
-}
-
-.small {
-  font-size: 1rem;
-}
-
-.medium {
-  font-size: 1.8rem;
-}
-
-.large {
-  font-size: 2.4rem;
+h1, h2 {
+  display: inline-block;
+  color: var(--fg-title);
+  font-family: 'Rambla', sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }
 
 .container {
@@ -81,55 +46,29 @@ h2 {
 }
 
 section {
-  margin: 3rem 0;
+  margin: 3rem 0 4rem 0;
   text-align: left;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
 }
 
-footer {
-  text-align: center;
-}
-
-footer ul {
-  justify-content: center;
-}
-
-abbr {
-  border-bottom: none;
-  text-decoration: none;
-  font-family: serif;
-}
-
-footer abbr[title="#aa9374"] {
-  color: #aa9374;
-}
-
-footer abbr[title="#da4d5e"] {
-  color: #da4d5e;
-}
-
 .social {
   margin: 0.7rem 0;
 }
 
-.caliper {
-  color: #da4d5e;
-}
-
 a {
   outline: 0;
-  color: #aa9374;
+  color: var(--fg-link);
   text-decoration: none;
 }
 
 a:hover {
-  background-color: rgba(170, 147, 116, 0.15);
+  background-color: var(--bg-accent);
 }
 
 ::selection {
-  background: rgba(170, 147, 116, 0.15);
+  background-color: var(--bg-accent);
 }
 
 ul {
@@ -142,7 +81,7 @@ ul {
 
 li {
   padding: 0;
-  margin: 0 0 0.7rem 0;
+  margin: 0;
 }
 
 ul.inline {
@@ -159,49 +98,20 @@ ul.inline li:last-child {
 }
 
 .twitter { color: #55acee; }
-.github { color: #333; }
-.night .github { color: #fff; }
-.mail { color: #d44638; }
-.lkdin { color: #1683bb; }
-
 .twitter:hover { background-color: rgba(85, 172, 238, 0.15); }
-.github:hover { background-color: rgba(51, 51, 51, 0.15); }
-.night .github:hover { background-color: rgba(255, 255, 255, 0.15); }
+.github { color: #fff; }
+.github:hover { background-color: rgba(255, 255, 255, 0.15); }
+.mail { color: #d44638; }
 .mail:hover { background-color: rgba(212, 70, 56, 0.15); }
+.lkdin { color: #1683bb; }
 .lkdin:hover { background-color: rgba(22, 131, 187, 0.15); }
-
-/* night theme */
-.frame.night {
-  color: #ede1cf;
-  background-color: #282828;
-}
-
-.night-on {
-  display: none;
-}
-
-.night .night-on {
-  display: block;
-}
-
-.night .night-off {
-  display: none;
-}
 
 
 /* small mobile devices */
 @media (max-width: 640px) {
-  html, body {
+  body {
     font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
-  .small {
-    font-size: 0.9rem;
-  }
-
-  .xsmall {
-    font-size: 0.7rem;
+    line-height: 150%;
   }
 
   .container {
@@ -210,8 +120,12 @@ ul.inline li:last-child {
     padding: 0;
   }
 
+  .small {
+    font-size: 0.9rem;
+  }
+
   ul.social {
-    justify-content: space-between;
+    justify-content: left;
   }
 
   ul.social li {
@@ -225,21 +139,17 @@ ul.inline li:last-child {
   ul.social a {
     display: inline-block;
   }
-
-  .prompt:before {
-    position: relative;
-  }
-
 }
 
 /* fonts & icons */
 @font-face {
   font-family: 'Iosevka Sparkle';
   font-display: swap;
-  font-weight: 300;
+  font-weight: 500;
   font-stretch: normal;
   font-style: normal;
-  src: url('fonts/iosevka-sparkle-light.woff2') format('woff2'), url('fonts/iosevka-sparkle-light.woff') format('woff'), url('fonts/iosevka-sparkle-light.ttf') format('truetype');
+  src: url('fonts/iosevka-sparkle-medium.woff2') format('woff2'),
+    url('fonts/iosevka-sparkle-medium.woff') format('woff'), url('fonts/iosevka-sparkle-medium.ttf') format('truetype');
 }
 
 

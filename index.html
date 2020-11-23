@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Patrick Stadler &mdash; software engineer">
   <title>pstadler &middot; sh</title>
-  <link rel="shortcut icon" type="image/x-icon" href="public/favicon.ico" id="favicon">
+  <link rel="shortcut icon" type="image/x-icon" href="public/favicon.ico">
+  <link rel="shortcut icon" href="public/favicon.svg">
   <link rel="stylesheet" type="text/css" href="public/stylesheet.css">
-  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rambla:ital,wght@1,700&display=swap" rel="stylesheet">
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -22,7 +24,7 @@
 <body itemscope itemtype="http://schema.org/Person">
   <div class="frame">
     <div class="container">
-      <h1 class="large"><i class="home caliper"></i>pstadler.sh</h1>
+      <h1>pstadler.sh</h1>
       <section>
         <div>
           Patrick Stadler &mdash; <span itemprop="jobTitle">Head of Web Development</span> at <a href="https://www.datatrans.ch/en">Datatrans Ltd</a>. Located in the beautiful city of <a href="http://en.wikipedia.org/wiki/Zurich"><span itemprop="address">Zürich</span>, <span itemprop="nationality">Switzerland</span></a>.
@@ -51,7 +53,7 @@
         </ul>
       </section>
       <section>
-        <h2 class="medium"><i class="prompt caliper"></i>Open Source</h2>
+        <h2>Open Source</h2>
         <ul>
           <li>
             <a href="https://github.com/hobby-kube/guide">Hobby Kube</a> &mdash; Kubernetes clusters for the hobbyist
@@ -104,7 +106,7 @@
         </ul>
       </section>
       <section>
-        <h2 class="medium"><i class="prompt caliper"></i>Writings</h2>
+        <h2>Writings</h2>
         <ul>
           <li>
             <a href="https://github.com/pstadler/keybase-gpg-github"><em>How to use Keybase.io and GPG to sign Git commits</em></a>
@@ -120,103 +122,5 @@
           </li>
         </ul>
       </section>
-      <footer class="xsmall night-off">
-        <ul class="inline">
-          <li><abbr class="small" title="#f7f2ed">○</abbr> #f7f2ed</li>
-          <li><abbr class="small" title="#666">●</abbr> #666666</li>
-          <li><abbr class="small" title="#aa9374">●</abbr> #aa9374</li>
-          <li><abbr class="small" title="#da4d5e">●</abbr> #da4d5e</li>
-        </ul>
-      </footer>
-      <footer class="xsmall night-on">
-        <ul class="inline">
-          <li><abbr class="small" title="#282828">○</abbr> #282828</li>
-          <li><abbr class="small" title="#ede1cf">●</abbr> #ede1cf</li>
-          <li><abbr class="small" title="#aa9374">●</abbr> #aa9374</li>
-          <li><abbr class="small" title="#da4d5e">●</abbr> #da4d5e</li>
-        </ul>
-      </footer>
-    </div>
   </div>
-  <script>
-    var toggleKey = 32; // space
-    var isToggled = false;
-
-    var frame = document.getElementsByClassName('frame')[0];
-    var clone = frame.cloneNode(true);
-
-    var darkSchemeMql = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
-
-    if (darkSchemeMql) {
-      darkSchemeMql.addListener(function (e) {
-        frame.className = (isToggled && e.matches) || (!isToggled && !e.matches) ? 'frame' : 'frame night';
-        clone.className = (frame.className === 'frame' ? 'frame night' : 'frame');
-      });
-
-      if (darkSchemeMql.matches) {
-        frame.className = 'frame night';
-      }
-    }
-
-    clone.className = (frame.className === 'frame' ? 'frame night' : 'frame');
-    clone.style.height = '0';
-    document.body.appendChild(clone);
-
-    function toggleMode() {
-      if(isToggled) {
-        frame.scrollTop = clone.scrollTop;
-      } else {
-        clone.scrollTop = frame.scrollTop;
-      }
-
-      var height = isToggled ? '0' : '100%';
-      clone.style.height = height;
-
-      isToggled = !isToggled;
-    }
-
-    document.body.addEventListener('mousedown', function(e) {
-      if(!e.shiftKey) {
-        return;
-      }
-
-      e.preventDefault();
-      toggleMode();
-    });
-
-    document.body.addEventListener('mouseup', function(e) {
-      if(e.shiftKey) {
-        e.preventDefault();
-        return;
-      }
-    });
-
-    document.body.addEventListener('keydown', function(e) {
-      if(e.keyCode !== toggleKey || e.shiftKey) {
-        return;
-      }
-
-      e.preventDefault();
-      toggleMode();
-    });
-
-    document.body.addEventListener('keyup', function(e) {
-      if(e.keyCode === toggleKey) {
-        e.preventDefault();
-      }
-    });
-
-    var tapTimer = null;
-    document.body.addEventListener('touchstart', function() {
-      if(!tapTimer) {
-        tapTimer = window.setTimeout(function() {
-          tapTimer = null;
-        }, 200);
-      } else {
-        window.clearTimeout(tapTimer);
-        tapTimer = null;
-        toggleMode();
-      }
-    });
-  </script>
 </body>
