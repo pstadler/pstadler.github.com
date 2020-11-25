@@ -1,11 +1,25 @@
 :root {
-  --bg-color1: rgb(12, 12, 23);
-  --bg-color2: rgb(16, 16, 55);
-  --bg-accent: rgba(255, 255, 255, 0.15);
+  --bg-dark: rgb(12, 12, 23);
+  --bg-medium: rgb(16, 16, 55);
+  --bg-bright: rgba(255, 255, 255, 0.15);
 
   --fg-text: rgb(162, 108, 240);
   --fg-title: rgb(216, 255, 109);
   --fg-link: rgb(255, 107, 107);
+  --bg-link: rgba(255, 107, 107, 0.15);
+
+  --fg-email: rgb(189, 181, 156);
+  --bg-email: rgba(189, 181, 156, 0.15);
+  --fg-twitter: rgb(85, 172, 238);
+  --bg-twitter: rgba(85, 172, 238, 0.15);
+  --fg-github: rgb(255, 255, 255);
+  --bg-github: rgba(255, 255, 255, 0.15);
+  --fg-lnkdn: rgb(22, 131, 187);
+  --bg-lnkdn: rgba(22, 131, 187, 0.15);
+}
+
+::selection {
+  background-color: var(--bg-bright);
 }
 
 html, body {
@@ -16,30 +30,19 @@ html, body {
 
 body {
   font-size: 1.5rem;
-  line-height: 180%;
+  line-height: 160%;
   box-sizing: border-box;
+  text-align: center;
   font-family: 'Iosevka Sparkle', serif;
   color: var(--fg-text);
-  background-color: var(--bg-color1);
-  background-image: linear-gradient(60deg, var(--bg-color1), var(--bg-color2));
+  background-color: var(--bg-dark);
+  background-image: linear-gradient(60deg, var(--bg-dark), var(--bg-medium));
   background-size: cover;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .frame {
-  text-align: center;
-}
-
-h1, h2 {
-  display: inline-block;
-  color: var(--fg-title);
-  font-family: 'Rambla', sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.container {
   max-width: 750px;
   margin: 5rem auto 0 auto;
   padding: 0 3rem;
@@ -53,8 +56,16 @@ section {
   hyphens: auto;
 }
 
-.social {
-  margin: 0.7rem 0;
+p {
+  margin: 1rem 0;
+}
+
+h1, h2 {
+  display: inline-block;
+  color: var(--fg-title);
+  font-family: 'Rambla', sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }
 
 a {
@@ -64,11 +75,11 @@ a {
 }
 
 a:hover {
-  background-color: var(--bg-accent);
+  background-color: var(--bg-link);
 }
 
-::selection {
-  background-color: var(--bg-accent);
+a[data-icon]::before {
+  margin-right: 0.3rem;
 }
 
 ul {
@@ -81,30 +92,17 @@ ul {
 
 li {
   padding: 0;
-  margin: 0;
+  margin: .5rem 0 0 0;
 }
 
-ul.inline {
-  flex-direction: row;
-}
-
-ul.inline li {
-  margin-right: 2rem;
-  vertical-align: middle;
-}
-
-ul.inline li:last-child {
-  margin-right: 0;
-}
-
-.twitter { color: #55acee; }
-.twitter:hover { background-color: rgba(85, 172, 238, 0.15); }
-.github { color: #fff; }
-.github:hover { background-color: rgba(255, 255, 255, 0.15); }
-.mail { color: #d44638; }
-.mail:hover { background-color: rgba(212, 70, 56, 0.15); }
-.lkdin { color: #1683bb; }
-.lkdin:hover { background-color: rgba(22, 131, 187, 0.15); }
+.twitter { color: var(--fg-twitter); }
+.twitter:hover { background-color: var(--bg-twitter); }
+.github { color: var(--fg-github); }
+.github:hover { background-color: var(--bg-github); }
+.email { color: var(--fg-email); }
+.email:hover { background-color: var(--bg-email); }
+.lnkdn { color: var(--fg-lnkdn); }
+.lnkdn:hover { background-color: var(--bg-lnkdn); }
 
 
 /* small mobile devices */
@@ -114,7 +112,7 @@ ul.inline li:last-child {
     line-height: 150%;
   }
 
-  .container {
+  .frame {
     margin: 3rem auto 0rem auto;
     width: 90%;
     padding: 0;
@@ -123,25 +121,8 @@ ul.inline li:last-child {
   .small {
     font-size: 0.9rem;
   }
-
-  ul.social {
-    justify-content: left;
-  }
-
-  ul.social li {
-    text-align: center;
-  }
-
-  ul.social i {
-    display: block;
-  }
-
-  ul.social a {
-    display: inline-block;
-  }
 }
 
-/* fonts & icons */
 @font-face {
   font-family: 'Iosevka Sparkle';
   font-display: swap;
@@ -151,7 +132,6 @@ ul.inline li:last-child {
   src: url('fonts/iosevka-sparkle-medium.woff2') format('woff2'),
     url('fonts/iosevka-sparkle-medium.woff') format('woff'), url('fonts/iosevka-sparkle-medium.ttf') format('truetype');
 }
-
 
 @font-face {
   font-family: 'icomoon';
@@ -165,9 +145,8 @@ ul.inline li:last-child {
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[data-icon]::before {
   font-family: 'icomoon' !important;
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -175,15 +154,15 @@ ul.inline li:last-child {
   line-height: 1;
 }
 
-.icon-mail:before {
+[data-icon="email"]::before {
   content: "\1f555";
 }
-.icon-twitter:before {
+[data-icon="twitter"]::before {
   content: "\1f551";
 }
-.icon-github:before {
+[data-icon="github"]::before {
   content: "\1f552";
 }
-.icon-lkdin:before {
+[data-icon="lnkdn"]::before {
   content: "\1f550";
 }
