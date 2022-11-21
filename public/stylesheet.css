@@ -1,20 +1,41 @@
 :root {
+  --bg-main: rgb(236, 255, 233);
+  --bg-hover: rgba(0, 0, 0, 0.15);
+  --fg-title: rgb(39, 108, 87);
+  --fg-text: rgb(43, 134, 74);
+
+  --fg-link: rgb(155, 105, 69);
+  --bg-link: rgba(155, 105, 69, 0.15);
+  --fg-email: rgb(181, 113, 170);
+  --bg-email: rgba(181, 113, 170, 0.15);
+  --fg-twitter: rgb(85, 172, 238);
+  --bg-twitter: rgba(85, 172, 238, 0.15);
+  --fg-github: rgb(0, 0, 0);
+  --bg-github: rgba(0, 0, 0, 0.15);
+  --fg-lnkdn: rgb(22, 131, 187);
+  --bg-lnkdn: rgba(22, 131, 187, 0.15);
+
+  --theme-toggle-content: '◐';
+}
+
+:root[data-color-scheme="dark"] {
   --bg-main: rgb(43, 5, 64);
   --bg-hover: rgba(255, 255, 255, 0.15);
-
   --fg-title: rgb(235, 165, 255);
   --fg-text: rgb(214, 92, 232);
+
   --fg-link: rgb(255, 139, 139);
   --bg-link: rgba(255, 139, 139, 0.15);
-
-  --fg-email: rgb(189, 181, 156);
-  --bg-email: rgba(189, 181, 156, 0.15);
+  --fg-email: rgb(113, 181, 156);
+  --bg-email: rgba(113, 181, 156, 0.15);
   --fg-twitter: rgb(85, 172, 238);
   --bg-twitter: rgba(85, 172, 238, 0.15);
   --fg-github: rgb(255, 255, 255);
   --bg-github: rgba(255, 255, 255, 0.15);
   --fg-lnkdn: rgb(22, 131, 187);
   --bg-lnkdn: rgba(22, 131, 187, 0.15);
+
+  --theme-toggle-content: '◑';
 }
 
 ::selection {
@@ -25,6 +46,7 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
+  transition: background .3s ease;
 }
 
 body {
@@ -58,7 +80,7 @@ p {
   margin: 1rem 0;
 }
 
-h1, h2 {
+.title, h2 {
   display: inline-block;
   color: var(--fg-title);
   font-family: 'Fredericka the Great', sans-serif;
@@ -67,8 +89,12 @@ h1, h2 {
   line-height: initial;
 }
 
+.title {
+   font-size: 3.5em;
+}
+
 h1 {
-  font-size: 3.5em;
+  all: unset;
 }
 
 h2 {
@@ -111,6 +137,25 @@ li {
 .lnkdn { color: var(--fg-lnkdn); }
 .lnkdn:hover { background-color: var(--bg-lnkdn); }
 
+.theme-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 2rem 2rem 0 0;
+  font-size: 5rem;
+  line-height: 100%;
+  opacity: .3;
+}
+
+.theme-toggle button {
+  all: unset;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.theme-toggle button::after {
+  content: var(--theme-toggle-content);
+}
 
 /* small mobile devices */
 @media (max-width: 640px) {
@@ -127,6 +172,11 @@ li {
 
   .small {
     font-size: 0.9rem;
+  }
+
+  .theme-toggle {
+    margin: 0rem;
+    font-size: 2rem;
   }
 }
 
@@ -151,7 +201,6 @@ li {
   font-style: normal;
   font-display: block;
 }
-
 
 [data-icon]::before {
   font-family: 'icomoon' !important;

@@ -4,21 +4,45 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Patrick Stadler &mdash; software engineer">
-  <meta name="theme-color" content="rgb(43, 5, 64)">
+  <meta name="theme-color">
   <title>pstadler &middot; dev</title>
-  <link rel="shortcut icon" type="image/x-icon" href="public/favicon.ico">
-  <link rel="shortcut icon" href="public/favicon.svg">
+  <link rel="icon" href="public/favicon.ico" sizes="any">
+  <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" type="text/css" href="public/stylesheet.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
   <script async defer data-website-id="ac26d9a7-f4d2-4931-8c22-e373b9f92a49" src="https://umami.std.one/hello.js"></script>
+  <script>
+    const setColorScheme = (isDark) => {
+      const theme = isDark ? 'dark' : 'light'
+      document.documentElement.setAttribute('data-color-scheme', theme)
+      // Safari doesn't need this, keeping for future reference:
+      // const currentBg = getComputedStyle(document.documentElement).getPropertyValue('--bg-main')
+      // document.querySelector('meta[name="theme-color"]').setAttribute('content', currentBg)
+    }
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    setColorScheme(mediaQuery.matches)
+    mediaQuery.addEventListener('change', ({ matches: isDark }) => setColorScheme(isDark))
+
+    window.onload = () => {
+      document.querySelector('.theme-toggle button').onclick = () =>
+        setColorScheme(document.documentElement.dataset.colorScheme !== 'dark'
+      )
+    }
+  </script>
 </head>
 <body itemscope itemtype="http://schema.org/Person">
   <div class="frame">
-    <h1>pstadler.dev</h1>
+    <div class="theme-toggle">
+      <button></button>
+    </div>
+    <div class="title">
+      pstadler.dev
+    </div>
     <section>
       <p>
-        Patrick Stadler &mdash; <span itemprop="jobTitle">Head of Web Development</span> at <a href="https://www.datatrans.ch/en">Datatrans Ltd</a>.
+        <h1>Patrick Stadler</h1> &mdash; <span itemprop="jobTitle">Head of Web Development</span> at <a href="https://www.datatrans.ch/en">Datatrans Ltd</a>.
         Located in the beautiful city of <span itemprop="address">Zürich</span>, <span itemprop="nationality">Switzerland</span>.
       </p>
       <p>
@@ -26,7 +50,7 @@
         Maintaining software on <a href="https://github.com/pstadler" rel="me" class="social github" data-icon="github">GitHub</a>.
         Reachable by <a href="mailto:patrick.stadler+sh@gmail.com" class="social email" data-icon="email">Email</a>
         and on <a href="http://www.linkedin.com/pub/patrick-stadler/34/932/3a8" rel="me" class="social lnkdn" data-icon="lnkdn">LinkedIn</a>.
-    </p>
+      </p>
     </section>
     <section>
       <h2>Open Source</h2>

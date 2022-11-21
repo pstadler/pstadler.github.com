@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Artboard</title>
-    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <circle id="Oval" fill="#2B0540" cx="50" cy="50" r="50"></circle>
+    <style>
+        .circle {
+            fill: rgb(236, 255, 233);
+            stroke: rgb(39, 108, 87);
+        }
+
+        .half-circle {
+            fill: rgb(39, 108, 87);
+            clip-path: url(#half-left);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .circle {
+                fill: rgb(43, 5, 64);
+                stroke: rgb(235, 165, 255);
+            }
+
+            .half-circle {
+                fill: rgb(235, 165, 255);
+                clip-path: url(#half-right);
+            }
+        }
+    </style>
+    <g stroke="none" stroke-width="10" fill="none" fill-rule="evenodd">
+        <circle class="circle" cx="50" cy="50" r="45"></circle>
+        <clipPath id="half-right">
+            <rect x="50" y="0" width="50" height="100"/>
+        </clipPath>
+        <clipPath id="half-left">
+            <rect x="0" y="0" width="50" height="100"/>
+        </clipPath>
+        <circle class="half-circle" cx="50" cy="50" r="45"></circle>
     </g>
 </svg>
