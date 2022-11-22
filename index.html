@@ -17,8 +17,8 @@
       const theme = isDark ? 'dark' : 'light'
       document.documentElement.setAttribute('data-color-scheme', theme)
       // Safari doesn't need this, keeping for future reference:
-      // const currentBg = getComputedStyle(document.documentElement).getPropertyValue('--bg-main')
-      // document.querySelector('meta[name="theme-color"]').setAttribute('content', currentBg)
+      //const currentBg = getComputedStyle(document.documentElement).getPropertyValue('--bg-main')
+      //document.querySelector('meta[name="theme-color"]').setAttribute('content', currentBg)
     }
 
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
@@ -27,8 +27,7 @@
 
     window.onload = () => {
       document.querySelector('.theme-toggle button').onclick = () =>
-        setColorScheme(document.documentElement.dataset.colorScheme !== 'dark'
-      )
+        setColorScheme(document.documentElement.dataset.colorScheme !== 'dark')
     }
   </script>
 </head>
@@ -68,13 +67,16 @@
           <a href="https://github.com/pstadler/flightplan">Flightplan</a> &mdash; run sequences of commands with Node.js
         </li>
         <li>
-          <a href="https://github.com/rokka-io/rokka.js">rokka.js</a> &mdash; the official rokka client library for Node.js
-        </li>
-        <li>
           <a href="https://github.com/pstadler/metrics.sh">metrics.sh</a> &mdash; a metrics collection and forwarding daemon
         </li>
         <li>
           <a href="http://candy-chat.github.com/candy/">Candy</a> &mdash; a web-based chat client for XMPP
+        </li>
+        <li>
+          <a href="https://github.com/rokka-io/rokka.js">rokka.js</a> &mdash; the official rokka client library for Node.js
+        </li>
+        <li>
+          <a href="https://github.com/pstadler/the-cube">The Cube</a> &mdash; fun with CSS3 transitions in 2012
         </li>
         <li>
           <a href="https://github.com/pstadler/alfred-mount">Mount Network Shares</a> with Alfred
@@ -87,9 +89,6 @@
         </li>
         <li>
           <a href="https://github.com/pstadler/optometrist">Optometrist</a> theme for Terminal & iTerm2
-        </li>
-        <li>
-          <a href="https://github.com/pstadler/the-cube">The Cube</a> &mdash; fun with CSS3 transitions
         </li>
         <li>
           <a href="https://github.com/pstadler/battery.js">Battery.js</a> &mdash; a tiny wrapper
