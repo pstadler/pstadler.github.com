@@ -14,6 +14,8 @@
   --bg-github: rgba(0, 0, 0, 0.15);
   --fg-lnkdn: rgb(22, 131, 187);
   --bg-lnkdn: rgba(22, 131, 187, 0.15);
+  --fg-mstdn: rgb(99, 100, 255);
+  --bg-mstdn: rgba(99, 100, 255, 0.15);
 
   --theme-toggle-content: '◐';
 }
@@ -28,12 +30,8 @@
   --bg-link: rgba(255, 139, 139, 0.15);
   --fg-email: rgb(113, 181, 156);
   --bg-email: rgba(113, 181, 156, 0.15);
-  --fg-twitter: rgb(85, 172, 238);
-  --bg-twitter: rgba(85, 172, 238, 0.15);
   --fg-github: rgb(255, 255, 255);
   --bg-github: rgba(255, 255, 255, 0.15);
-  --fg-lnkdn: rgb(22, 131, 187);
-  --bg-lnkdn: rgba(22, 131, 187, 0.15);
 
   --theme-toggle-content: '◑';
 }
@@ -136,6 +134,8 @@ li {
 .email:hover { background-color: var(--bg-email); }
 .lnkdn { color: var(--fg-lnkdn); }
 .lnkdn:hover { background-color: var(--bg-lnkdn); }
+.mstdn { color: var(--fg-mstdn); }
+.mstdn:hover { background-color: var(--bg-mstdn); }
 
 .theme-toggle {
   position: absolute;
@@ -192,11 +192,10 @@ li {
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?h8dge3');
-  src:  url('fonts/icomoon.eot?h8dge3#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?h8dge3') format('truetype'),
-    url('fonts/icomoon.woff?h8dge3') format('woff'),
-    url('fonts/icomoon.svg?h8dge3#icomoon') format('svg');
+  src:
+    url('fonts/icomoon.ttf?18lk9b') format('truetype'),
+    url('fonts/icomoon.woff?18lk9b') format('woff'),
+    url('fonts/icomoon.svg?18lk9b#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -212,14 +211,17 @@ li {
 }
 
 [data-icon="email"]::before {
-  content: "\1f555";
+  content: "\2780";
+}
+[data-icon="mstdn"]::before {
+  content: "\2781";
 }
 [data-icon="twitter"]::before {
-  content: "\1f551";
+  content: "\2782";
 }
 [data-icon="github"]::before {
-  content: "\1f552";
+  content: "\2783";
 }
 [data-icon="lnkdn"]::before {
-  content: "\1f550";
+  content: "\2784";
 }
