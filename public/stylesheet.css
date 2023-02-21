@@ -1,8 +1,9 @@
 :root {
-  --bg-main: rgb(236, 255, 233);
+  --bg-main: rgb(205, 255, 192);
+  --bg-main-alt: rgb(223, 255, 191);
   --bg-hover: rgba(0, 0, 0, 0.15);
-  --fg-title: rgb(39, 108, 87);
-  --fg-text: rgb(43, 134, 74);
+  --fg-text: rgb(10, 111, 43);
+  --fg-title: rgb(9, 94, 66);
 
   --fg-link: rgb(155, 105, 69);
   --bg-link: rgba(155, 105, 69, 0.15);
@@ -22,6 +23,7 @@
 
 :root[data-color-scheme="dark"] {
   --bg-main: rgb(43, 5, 64);
+  --bg-main-alt: rgb(50, 12, 96);
   --bg-hover: rgba(255, 255, 255, 0.15);
   --fg-title: rgb(235, 165, 255);
   --fg-text: rgb(214, 92, 232);
@@ -55,7 +57,8 @@ body {
   font-family: 'Iosevka Sparkle', serif;
   color: var(--fg-text);
   background-color: var(--bg-main);
-  background-size: cover;
+  background: linear-gradient(180deg, var(--bg-main), var(--bg-main-alt) 100vh), var(--bg-main);
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
